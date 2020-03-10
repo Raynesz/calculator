@@ -7,7 +7,6 @@
 using namespace std;
 
 
-
 int sub(vector<string>& v) {
   int res = stoi(v[0])-stoi(v[1]);
   return res;
