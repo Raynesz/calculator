@@ -8,9 +8,11 @@
 #include "calculator.h"
 #include "operations.h"
 
+
 using namespace std;
 
 int main() {
+  test();
   string str;
   vector<string> v;
   enum operation {_add='+', _sub='-', _mul='*', _div='/'}op;
