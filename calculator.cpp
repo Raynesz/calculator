@@ -19,7 +19,6 @@ int main() {
   getline(cin, str);
   while (str.compare("exit") != 0) {
     v.clear();
-    //cout << str << endl;
     if (str.find('+') != std::string::npos) {
       split(str, v, op=_add);
       res=add(v);
@@ -38,7 +37,6 @@ int main() {
     if (str.compare("")!=0) cout << res << endl;
     cout << "Please type in the calculation that you would like to perform and then press Enter. Type 'exit' to terminate the program." << endl << "->";
     getline(cin, str);
-    //system("PAUSE");
   }
   return 0;
 }
