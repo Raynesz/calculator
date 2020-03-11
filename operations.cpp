@@ -1,24 +1,25 @@
+#define _GLIBCXX_USE_CXX11_ABI 0
 #include <vector>
 #include <string>
 #include <iostream>
 #include "operations.h"
-#include "calculator.h"
 
 using namespace std;
 
-int sub(vector<string>& v) {
-  int res = stoi(v[0])-stoi(v[1]);
-  return res;
+double add(vector<string>& v) {
+  return stod(v[0])+stod(v[1]);
 }
 
-int mul(vector<string>& v) {
-  return stoi(v[0])*stoi(v[1]);
+double sub(vector<string>& v) {
+  return stod(v[0])-stod(v[1]);
 }
 
-int div(vector<string>& v) {
-  return stoi(v[0])/stoi(v[1]);
+double mul(vector<string>& v) {
+  return stod(v[0])*stod(v[1]);
 }
 
-void test() {
-  cout << "test" << endl;
+double div(vector<string>& v) {
+  double x=stod(v[0]);
+  double y=stod(v[1]);
+  return x/y;
 }

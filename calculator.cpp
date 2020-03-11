@@ -8,38 +8,40 @@
 #include "calculator.h"
 #include "operations.h"
 
-
 using namespace std;
 
 int main() {
-  test();
   string str;
   vector<string> v;
   enum operation {_add='+', _sub='-', _mul='*', _div='/'}op;
-  int res;
-  cout << "Please type in the calculation that you would like to perform and then press Enter." << endl << "->";
+  double res;
+  cout << "Please type in the calculation that you would like to perform and then press Enter. Type 'exit' to terminate the program." << endl << "->";
   getline(cin, str);
-  cout << str << endl;
-  if (str.find('+') != std::string::npos) {
-    split(str, v, op=_add);
-    res=add(v);
-  } else if (str.find('-') != std::string::npos) {
-    split(str, v, op=_sub);
-    res=sub(v);
-  } else if (str.find('*') != std::string::npos) {
-    split(str, v, op=_mul);
-    res=mul(v);
-  } else if (str.find('/') != std::string::npos) {
-    split(str, v, op=_div);
-    if (stoi(v[1]) == 0) {
-      cout << "Denominator can't be 0.";
-    } else res=div(v);
+  while (str.compare("exit") != 0) {
+    v.clear();
+    //cout << str << endl;
+    if (str.find('+') != std::string::npos) {
+      split(str, v, op=_add);
+      res=add(v);
+    } else if (str.find('-') != std::string::npos) {
+      split(str, v, op=_sub);
+      res=sub(v);
+    } else if (str.find('*') != std::string::npos) {
+      split(str, v, op=_mul);
+      res=mul(v);
+    } else if (str.find('/') != std::string::npos) {
+      split(str, v, op=_div);
+      if (stod(v[1]) == 0) {
+        cout << "Denominator can't be 0.";
+      } else res=div(v);
+    }
+    if (str.compare("")!=0) cout << res << endl;
+    cout << "Please type in the calculation that you would like to perform and then press Enter. Type 'exit' to terminate the program." << endl << "->";
+    getline(cin, str);
+    //system("PAUSE");
   }
-  cout << res << endl;
-  //system("PAUSE");
   return 0;
 }
-
 
 void split(string& str, vector<string>& v, char delim) {
   stringstream ss(str);
@@ -47,8 +49,4 @@ void split(string& str, vector<string>& v, char delim) {
   while (getline(ss, token, delim)) {
     v.push_back(token);
   }
-}
-
-int add(vector<string>& v) {
-  return stoi(v[0])+stoi(v[1]);
 }
