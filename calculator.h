@@ -1,6 +1,5 @@
-#define _GLIBCXX_USE_CXX11_ABI 0
-#ifndef CALCULATOR_H
-#define CALCULATOR_H
+#ifndef CALCULATOR_H_INCLUDED
+#define CALCULATOR_H_INCLUDED
 #include <vector>
 #include <string>
 

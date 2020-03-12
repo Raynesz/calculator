@@ -1,7 +1,6 @@
-#define _GLIBCXX_USE_CXX11_ABI 0
+//#define _GLIBCXX_USE_CXX11_ABI 0
 #include <vector>
 #include <string>
-#include <iostream>
 #include "operations.h"
 
 using namespace std;
