@@ -18,7 +18,5 @@ double mul(vector<string>& v) {
 }
 
 double div(vector<string>& v) {
-  double x=stod(v[0]);
-  double y=stod(v[1]);
-  return x/y;
+  return stod(v[0])/stod(v[1]);
 }
