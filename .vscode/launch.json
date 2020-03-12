@@ -8,14 +8,14 @@
             "name": "g++.exe - Build and debug active file",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
+            "program": "${fileDirname}\\calculator_v0.exe",
             "args": [
                 "-g",
                 "${workspaceFolder}\\*.cpp",
                 "-static-libgcc",
                 "-static-libstdc++",
                 "-o",
-                "${fileDirname}\\calculator.exe"
+                "${fileDirname}\\calculator_v0.exe"
             ],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",

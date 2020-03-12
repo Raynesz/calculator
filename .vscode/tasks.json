@@ -11,7 +11,7 @@
                 "-static-libgcc",
                 "-static-libstdc++",
                 "-o",
-                "${fileDirname}\\calculator.exe"
+                "${fileDirname}\\calculator_v0.exe"
             ],
             "options": {
                 "cwd": "C:\\MinGW\\bin"
