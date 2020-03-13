@@ -4,6 +4,6 @@
 #include <string>
 
 bool is_digits(const std::string&);
-void split(std::string&, std::vector<std::string>&, char);
+void split(const std::string&, std::vector<std::string>&, char&);
 
 #endif

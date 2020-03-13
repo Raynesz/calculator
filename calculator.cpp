@@ -62,7 +62,7 @@ bool is_digits(const string& str) {
   else return 0;
 }
 
-void split(string& str, vector<string>& container, char delim) {
+void split(const string& str, vector<string>& container, char& delim) {
   stringstream ss(str);
   string token;
   while (getline(ss, token, delim)) {
